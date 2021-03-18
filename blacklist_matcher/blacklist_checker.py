@@ -24,7 +24,7 @@ def extract_valid_names(full_name, noise_list):
     return list(filter(lambda name: name not in noise_list, full_name.split()))
 
 
-def calculate_weights(full_name, black_list, noise_list):
+def calculate_weights(full_name, black_list, noise_list): // Comment: Rename as calculate_match_percentages
     names = extract_valid_names(full_name, noise_list)
 
     match_percentages = {}
